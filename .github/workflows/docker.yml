@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build docker image
       run: | 
-        docker build --platform linux --tag ricardoprograming161/cicdtest:latest -f .
+        docker build --platform linux --tag ricardoprograming161/cicdtest:latest -f Dockerfile .
     - name: Publish docker image
       run: |
         docker push ricardoprograming161/cicdtest:latest
